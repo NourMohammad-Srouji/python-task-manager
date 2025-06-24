@@ -30,3 +30,16 @@ def complete_next_task(prio_queue):
          print("It's duration is",  prio_queue[highest_priority_task][1], 'minutes')
          print("It's priority is",  prio_queue[highest_priority_task][2])
          return highest_priority_task 
+
+def insert_sort(prio_queue):
+    for i in range(1, len(prio_queue)):
+        key = prio_queue[i][0]
+        temp = prio_queue[i]
+        j = i - 1
+        while j >= 0 and prio_queue[j][0] > key:
+            prio_queue[j+1] = prio_queue[j]
+            j -= 1
+            prio_queue[j+1] = temp
+  
+    return prio_queue
+    
