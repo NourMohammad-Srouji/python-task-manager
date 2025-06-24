@@ -103,3 +103,8 @@ def main(num_of_tasks):
         print('Task', num+1, ':')
         title = input('Enter the title for task ' + str(num+1) + ':')
         duration = int(input('Enter the task duration (in mins):'))
+        while duration <= 0:
+            print('This is an invalid duration of time')
+            duration = int(input('Please enter a positive time in minutes: '))
+        priority = int(input('Enter the priority for the task (lower value of priority the higher it is): '))
+        task = (title, duration, priority)
