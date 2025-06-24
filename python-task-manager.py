@@ -43,3 +43,18 @@ def insert_sort(prio_queue):
   
     return prio_queue
     
+def search_for_task(prio_queue, title):
+    low = 0
+    high = len(prio_queue) - 1
+
+    Found = True
+    while low <= high:
+        mid = (low + high) // 2
+    
+        if prio_queue[mid][0].lower() == title:
+            return Found, title
+        elif prio_queue[mid][0].lower() < title:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return not Found, title
