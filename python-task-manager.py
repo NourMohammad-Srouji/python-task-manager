@@ -117,3 +117,26 @@ prio_queue = []
 # calling the functions:
 
 main(num_of_tasks)
+
+for i in range(num_of_tasks):
+   sort = insert_sort(prio_queue)
+   task_with_highest_priority = complete_next_task(sort)
+   print('\n--- Completing Next Task ---\n')
+   print('The task with highest_priority is:\n', prio_queue[task_with_highest_priority][0])
+    
+   print('\n--- Searching for the given task ---\n')
+   task_searching, task = search_for_task(prio_queue, title = input('Enter your title of task to search if it is found: ').lower())
+   if task_searching:
+      print('The task', task, 'is found')
+   else:
+      print('Task with title', task, 'is not found.')
+    
+   Sorting = sort_tasks(sort)
+   print("\n--- Sorting Tasks by Duration ---")
+   print('The tasks are sorted in ascending order of duration.\n')
+   print(Sorting, '\n')
+
+   sort.pop(task_with_highest_priority)
+
+   print('-----------------------------------------------------------')
+    
