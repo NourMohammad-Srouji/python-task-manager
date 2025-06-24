@@ -91,4 +91,11 @@ def merge_sort(left, right):
     return result
 
 def main(num_of_tasks):
+    while num_of_tasks <= 0:
+        if num_of_tasks == 0:
+            print('There is no tasks to be done.')
+            break
+        else:
+            print('You entered invalid number of tasks.')
+            num_of_tasks = int(input('Please enter a new valid number of tasks: '))
     
