@@ -89,3 +89,6 @@ def merge_sort(left, right):
         j += 1
         
     return result
+
+def main(num_of_tasks):
+    
