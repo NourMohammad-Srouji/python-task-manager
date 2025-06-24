@@ -108,3 +108,4 @@ def main(num_of_tasks):
             duration = int(input('Please enter a positive time in minutes: '))
         priority = int(input('Enter the priority for the task (lower value of priority the higher it is): '))
         task = (title, duration, priority)
+        insert(prio_queue, task)
