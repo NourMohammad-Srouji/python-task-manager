@@ -98,4 +98,8 @@ def main(num_of_tasks):
         else:
             print('You entered invalid number of tasks.')
             num_of_tasks = int(input('Please enter a new valid number of tasks: '))
-    
+
+    for num in range(num_of_tasks):
+        print('Task', num+1, ':')
+        title = input('Enter the title for task ' + str(num+1) + ':')
+        duration = int(input('Enter the task duration (in mins):'))
