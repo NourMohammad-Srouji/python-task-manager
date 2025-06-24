@@ -141,3 +141,5 @@ for i in range(num_of_tasks):
    print('-----------------------------------------------------------')
     
 if num_of_tasks > 0:
+    print('\nThere is no other tasks.')
+    print('You finished all your tasks') 
