@@ -113,3 +113,7 @@ def main(num_of_tasks):
 num_of_tasks = int(input('Enter the number of tasks you want to perform: '))
 
 prio_queue = []
+
+# calling the functions:
+
+main(num_of_tasks)
