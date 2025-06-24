@@ -109,3 +109,7 @@ def main(num_of_tasks):
         priority = int(input('Enter the priority for the task (lower value of priority the higher it is): '))
         task = (title, duration, priority)
         insert(prio_queue, task)
+
+num_of_tasks = int(input('Enter the number of tasks you want to perform: '))
+
+prio_queue = []
