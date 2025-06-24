@@ -23,3 +23,10 @@ def peek(prio_queue, extract_highest_priority):
         
 def is_empty(prio_queue):
     return len(prio_queue) == 0
+
+def complete_next_task(prio_queue):
+         highest_priority_task =  extract(prio_queue)
+         print('The next task with highest priority is:',  prio_queue[highest_priority_task][0])
+         print("It's duration is",  prio_queue[highest_priority_task][1], 'minutes')
+         print("It's priority is",  prio_queue[highest_priority_task][2])
+         return highest_priority_task 
