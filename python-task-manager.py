@@ -58,3 +58,34 @@ def search_for_task(prio_queue, title):
         else:
             high = mid - 1
     return not Found, title
+
+def sort_tasks(L):
+    if len(L) <= 1:
+        return L
+
+    mid = len(L) // 2
+    left = sort_tasks(L[:mid])
+    right = sort_tasks(L[mid:])
+
+    return merge_sort(left, right)
+
+def merge_sort(left, right):
+    result = []
+    i = 0
+    j = 0
+
+    while i < len(left) and j < len(right):
+        if left[i][1] < right[j][1]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
+    while i < len(left):
+        result.append(left[i])
+        i += 1
+    while j < len(right):
+        result.append(right[j])
+        j += 1
+        
+    return result
